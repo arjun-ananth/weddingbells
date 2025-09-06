@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#bb2649"/>
+      <stop offset="1" stop-color="#e9c4cc"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="white"/>
+  <g transform="translate(8,8)">
+    <!-- two overlapping rings -->
+    <circle cx="18" cy="28" r="12" fill="none" stroke="url(#g)" stroke-width="4"/>
+    <circle cx="30" cy="28" r="12" fill="none" stroke="url(#g)" stroke-width="4" opacity="0.9"/>
+    <!-- small heart above -->
+    <path d="M22 8c0-2 1.6-4 4-4s4 2 4 4c0 2.8-3.2 5.2-4 6-0.8-0.8-4-3.2-4-6z" fill="url(#g)"/>
+  </g>
+</svg>
