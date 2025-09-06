@@ -4,11 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lara & Arjun — Wedding</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
-  <!-- Favicon -->
+
+  <!-- Wedding-themed favicon -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
   <style>
     :root {
       --bg: #faf7f4;
@@ -22,75 +26,72 @@
       --shadow: 0 10px 30px rgba(0,0,0,.06);
     }
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .wrap { max-width: var(--max); margin: 0 auto; padding: 24px; }
-    .nav { display:flex; gap:16px; flex-wrap:wrap; justify-content:center; align-items:center; padding: 12px 0 24px; position: sticky; top: 0; background: color-mix(in srgb, var(--bg) 92%, white 8%); backdrop-filter: blur(8px); z-index: 10; border-bottom: 1px solid #eee; }
-    .nav a { padding: 10px 14px; border-radius: 999px; background: var(--card); box-shadow: var(--shadow); border: 1px solid #eee; font-weight: 500; }
+
+    /* Navigation */
+    .nav { display:flex; gap:16px; flex-wrap:wrap; justify-content:center; align-items:center;
+           padding: 12px 0 24px; position: sticky; top: 0; background: color-mix(in srgb, var(--bg) 92%, white 8%);
+           backdrop-filter: blur(8px); z-index: 10; border-bottom: 1px solid #eee; }
+    .nav a { padding: 10px 14px; border-radius: 999px; background: var(--card); box-shadow: var(--shadow);
+             border: 1px solid #eee; font-weight: 500; }
+
+    /* Hero */
     .hero { display:grid; gap: 20px; align-items:center; grid-template-columns: 1.2fr .8fr; }
     @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
     .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid #eee; }
-    .hero-card { padding: 40px; }
-    .badge { display:inline-flex; align-items:center; gap:8px; font-size: 12px; color: var(--muted); background: #f3f3f3; padding: 6px 10px; border-radius: 999px; border: 1px solid #eaeaea; }
-    .title { font-family: "Playfair Display", serif; font-size: clamp(36px, 7vw, 64px); line-height: 1.05; margin: 10px 0 6px; }
-    .subtitle { color: var(--muted); font-size: clamp(16px, 2.2vw, 18px); }
-    section { scroll-margin-top: 90px; margin: 40px 0; }
-    h2 { font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(24px, 3.2vw, 34px); margin: 0 0 10px; }
-    .two { display:grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    @media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
-    .content { padding: 26px 28px; }
-    .lead { font-size: 18px; line-height: 1.7; }
-    .muted { color: var(--muted); }
-    .chips { display:flex; flex-wrap:wrap; gap: 10px; margin-top: 10px; }
-    .chip { background: #fff4f6; color: var(--accent); border: 1px solid #ffdbe3; padding: 6px 10px; border-radius: 999px; font-size: 12px; }
-    .kicker { text-transform: uppercase; letter-spacing: .16em; font-size: 12px; color: var(--accent); font-weight: 700; }
-    .timeline { display:grid; gap: 14px; }
-    .event { padding: 16px 18px; border: 1px dashed #e9d0d6; background: #fffafd; border-radius: 14px; }
-    .event strong { display:block; }
-    .qa { display:grid; gap: 12px; }
-    details { background: #ffffff; border: 1px solid #eee; border-radius: 14px; padding: 14px 16px; }
-    summary { cursor: pointer; font-weight: 600; }
-    .footer { text-align:center; color: var(--muted); padding: 32px 0 60px; }
-    .btn { display:inline-flex; align-items:center; gap:8px; padding: 10px 14px; border-radius: 12px; background: var(--accent); color:#fff; border: 0; font-weight:600; }
-    .btn.secondary { background: #222; }
-    .cta-row { display:flex; gap: 12px; flex-wrap:wrap; margin-top: 18px; }
-    .note { font-size: 13px; color: var(--muted); }
-    .grid { display:grid; gap: 20px; }
-    .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-    @media (max-width: 900px) { .grid.cols-3 { grid-template-columns: 1fr; } }
-    .list { margin: 0; padding-left: 18px; }
-    /* Headings (romantic calligraphy) */
+    .hero-card { padding: 40px; text-align: center; }
+    .badge { display:inline-flex; align-items:center; gap:8px; font-size: 12px; color: var(--muted);
+             background: #f3f3f3; padding: 6px 10px; border-radius: 999px; border: 1px solid #eaeaea; }
+
+    /* Typography */
     .title {
       font-family: 'Great Vibes', cursive;
       font-size: clamp(48px, 8vw, 80px);
       font-weight: 400;
       color: var(--accent);
       margin: 0 0 12px;
-      text-align: center;
       letter-spacing: 1px;
     }
-    /* Subheadings (serif elegance) */
+    .subtitle { color: var(--muted); font-size: clamp(16px, 2.2vw, 18px); }
     h2, h3 {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
       font-size: clamp(26px, 4vw, 38px);
       color: var(--text);
     }
-    /* Body text (readable serif) */
     body, p, li {
       font-family: 'Cormorant Garamond', serif;
       font-size: 18px;
       line-height: 1.7;
       color: var(--text);
     }
-    /* Optional: small details in sans-serif for contrast */
-    .badge, .chip, .note {
-      font-family: 'Raleway', sans-serif;
-      font-size: 14px;
-      letter-spacing: 0.5px;
-    }
-    /* RSVP form font match */
+
+    /* Layout helpers */
+    section { scroll-margin-top: 90px; margin: 40px 0; }
+    .two { display:grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
+    .content { padding: 26px 28px; }
+    .lead { font-size: 18px; line-height: 1.7; }
+    .chips { display:flex; flex-wrap:wrap; gap: 10px; margin-top: 10px; }
+    .chip { background: #fff4f6; color: var(--accent); border: 1px solid #ffdbe3; padding: 6px 10px; border-radius: 999px; font-size: 12px; }
+    .kicker { text-transform: uppercase; letter-spacing: .16em; font-size: 12px; color: var(--accent); font-weight: 700; }
+    .timeline { display:grid; gap: 14px; }
+    .event { padding: 16px 18px; border: 1px dashed #e9d0d6; background: #fffafd; border-radius: 14px; }
+    .qa { display:grid; gap: 12px; }
+    details { background: #ffffff; border: 1px solid #eee; border-radius: 14px; padding: 14px 16px; }
+    summary { cursor: pointer; font-weight: 600; }
+    .footer { text-align:center; color: var(--muted); padding: 32px 0 60px; }
+
+    /* Buttons */
+    .btn { display:inline-flex; align-items:center; gap:8px; padding: 10px 14px; border-radius: 12px;
+           background: var(--accent); color:#fff; border: 0; font-weight:600; cursor:pointer; }
+    .btn.secondary { background: #222; }
+    .cta-row { display:flex; gap: 12px; flex-wrap:wrap; margin-top: 18px; justify-content:center; }
+
+    /* RSVP */
     .rsvp-form,
     .rsvp-form input,
     .rsvp-form select,
@@ -103,6 +104,7 @@
   </style>
 </head>
 <body>
+  <!-- Navigation -->
   <div class="nav">
     <a href="#story">Our Story</a>
     <a href="#day1">Day 1</a>
@@ -112,16 +114,113 @@
   </div>
 
   <div class="wrap">
+    <!-- Hero -->
     <div class="hero">
       <div class="card hero-card">
         <div class="badge">Singapore • Dec 1 & 3, 2025</div>
         <h1 class="title">Lara &amp; Arjun</h1>
         <p class="subtitle">An intimate celebration of balance, tradition, and love.</p>
         <div class="cta-row">
-          <a class="btn" href="#day1" aria-label="Jump to Day 1 details">View Day 1</a>
-          <a class="btn secondary" href="#day2" aria-label="Jump to Day 2 details">View Day 2</a>
+          <a class="btn" href="#day1">View Day 1</a>
+          <a class="btn secondary" href="#day2">View Day 2</a>
         </div>
       </div>
     </div>
 
-    <!-- (rest of your HTML remains unchanged) -->
+    <!-- Intro -->
+    <section id="intro">
+      <div class="card content">
+        <p class="lead">Dear friends and family,</p>
+        <p class="lead">We are excited to gather a handful of the people we love most in one place…</p>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story">
+      <div class="two">
+        <div class="card content">
+          <div class="kicker">Our Story</div>
+          <h2>How we met</h2>
+          <p>In June 2022, things started to unravel — or maybe fall into place…</p>
+        </div>
+        <div class="card content">
+          <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:baseline; margin-bottom:10px;">
+            <h2 style="margin:0;">What we love</h2>
+            <span style="font-weight:normal; color:#666;">About each other</span>
+          </div>
+          <p><strong>Q:</strong> What do you love about Arjun?<br><em>Lara:</em> He’s solid…</p>
+          <p><strong>Q:</strong> What do you love about Lara?<br><em>Arjun:</em> She’s genuine…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day 1 -->
+    <section id="day1">
+      <div class="card content">
+        <div class="kicker">Celebration Day 1</div>
+        <h2>Solemnization & Reception — Dec 1, 2025</h2>
+        <p><strong>Venue:</strong> Raffles Hotel, Singapore</p>
+        <div class="timeline">
+          <div class="event"><strong>5:00 PM</strong> — Guest arrival</div>
+          <div class="event"><strong>6:00 PM</strong> — Solemnization ceremony</div>
+          <div class="event"><strong>7:00–10:00 PM</strong> — Reception dinner & speeches</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day 2 -->
+    <section id="day2">
+      <div class="card content">
+        <div class="kicker">Celebration Day 2</div>
+        <h2>Hindu Ceremony — Dec 3, 2025</h2>
+        <p><strong>Venue:</strong> Perumal Temple, Little India</p>
+        <div class="timeline">
+          <div class="event"><strong>8:30 AM</strong> — Guest arrival</div>
+          <div class="event"><strong>9:00 AM</strong> — Wedding rituals</div>
+          <div class="event"><strong>11:00 AM</strong> — Temple lunch</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q&A -->
+    <section id="qa">
+      <div class="card content">
+        <div class="kicker">Q&A</div>
+        <h2>Good to know</h2>
+        <div class="qa">
+          <details><summary>When should I arrive?</summary><p>Most guests arrive by Nov 29…</p></details>
+          <details><summary>Where should I stay?</summary><p>CBD, Marina Bay, or Orchard Road…</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp">
+      <div class="card content rsvp-form">
+        <div class="kicker">RSVP</div>
+        <h2>Will you celebrate with us?</h2>
+        <form action="https://formspree.io/f/your-endpoint" method="POST">
+          <label>Name*<br><input type="text" name="name" required></label><br><br>
+          <label>Email<br><input type="email" name="email"></label><br><br>
+          <label>Which events will you attend?<br>
+            <input type="checkbox" name="event[]" value="Dec 1st"> Dec 1st (Reception)<br>
+            <input type="checkbox" name="event[]" value="Dec 3rd"> Dec 3rd (Hindu Ceremony)
+          </label><br><br>
+          <label>Dietary preference<br>
+            <select name="diet">
+              <option value="">--Please choose--</option>
+              <option value="Vegetarian">Vegetarian</option>
+              <option value="Non-Vegetarian">Non-Vegetarian</option>
+            </select>
+          </label><br><br>
+          <label>Notes<br><textarea name="notes" rows="3"></textarea></label><br><br>
+          <button type="submit" class="btn">Send RSVP</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <p class="footer">With love, Lara &amp; Arjun • Singapore • 2025</p>
+  </div>
+</body>
+</html>
