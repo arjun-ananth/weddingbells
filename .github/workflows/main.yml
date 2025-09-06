@@ -1,0 +1,10 @@
+# make sure you're on main
+git checkout main  
+
+# edit something small, e.g. README.md
+echo "Trigger deploy" >> README.md  
+
+# commit & push
+git add README.md
+git commit -m "Trigger deploy for Pages"
+git push origin main
